@@ -2,7 +2,7 @@
 %html
   %head
     %meta{ charset: 'UTF-8' }
-    %title LRUG
+    %title= yield(:title)
     = stylesheet_link_tag "application"
     = csrf_meta_tags
   %body
