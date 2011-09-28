@@ -15,7 +15,7 @@
     = yield
     %footer
       %ul
-        %li> wcześniejsze prezentacje
+        %li>=link_to 'wcześniejsze prezentacje', events_path
         %li= link_to 'kod źródłowy strony', 'https://github.com/bkzl/lrug.pl'
     = javascript_include_tag "http://maps.googleapis.com/maps/api/js?sensor=false"
     = javascript_include_tag "application"

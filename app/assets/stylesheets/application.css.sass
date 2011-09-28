@@ -4,24 +4,45 @@
   *= require_tree .
   */
 
+// TODO: remove duplications from css!
+
 body
   font-family: 'Helvetica Neue', 'Helvetica', sans-serif
   margin: 3em auto 2em
   width: 480px
-.info
-  text-transform: uppercase
-  font-weight: bold
-  margin: 2em 0 1em
-  .date
-    font-size: 2em
-    color: #b01111
-  .address
-    font-size: 1.4em
-    line-height: 1.2em
-    color: #bbb
-  .address2
-    font-size: 1em
-    color: #ccc
-.map
-  width: 480px
-  height: 300px
+
+header a
+  text-decoration: none
+  h1
+    font-weight: bold
+    text-transform: uppercase
+    .lodz
+      font-size: 2.3em
+      margin-left: .3em
+      line-height: 1em
+      text-align: left
+      color: #aaa
+    .ruby
+      font-size: 10.5em
+      line-height: .8em
+      text-align: center
+      color: #b01111
+    .user_group
+      font-size: 2em
+      margin-right: .3em
+      line-height: 1.5em
+      text-align: right
+      color: #aaa
+
+footer
+  text-align: center
+  ul
+    font-size: .9em
+    li
+      display: inline-block
+      &:before
+        content: "|"
+        padding: 0 1em
+      &:first-child:before
+        content: ""
+        padding: 0

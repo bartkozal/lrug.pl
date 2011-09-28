@@ -3,7 +3,7 @@
 require "spec_helper"
 
 feature "Welcome page" do
-  scenario "visit /" do
+  scenario "open lrug.pl" do
     visit '/'
 
     page.should have_content('Łódź Ruby User Group')
@@ -25,8 +25,21 @@ feature "Welcome page" do
     end
 
     within 'footer' do
-      page.should have_content('wcześniejsze prezentacje')
+      page.should have_link('wcześniejsze prezentacje', href: events_path)
       page.should have_link('kod źródłowy', href: 'https://github.com/bkzl/lrug.pl')
+    end
+  end
+
+  scenario "click link 'wcześniejsze prezentacje'" do
+    visit '/'
+    click_link 'wcześniejsze prezentacje'
+    current_path.should == events_path
+    within 'ol.events' do
+      page.should have_selector('.event')
+      within 'li.event' do
+        page.should have_selector('.date', text: '20 października 2011')
+        page.should have_selector('ul.presentations')
+      end
     end
   end
 end
