@@ -1,5 +1,6 @@
 class Event < ActiveRecord::Base
   has_many :presentations
+  validate :planned_at, presence: true, uniqueness: true
   default_scope includes(:presentations).order("planned_at DESC")
 
   def date
