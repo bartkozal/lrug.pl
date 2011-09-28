@@ -1,9 +1,9 @@
 !!!
 %html
   %head
+    %meta{ charset: 'UTF-8' }
     %title LRUG
-    = stylesheet_link_tag    "application"
-    = javascript_include_tag "application"
+    = stylesheet_link_tag "application"
     = csrf_meta_tags
   %body
     %header
@@ -16,3 +16,5 @@
       %ul
         %li> wcześniejsze prezentacje
         %li= link_to 'kod źródłowy', 'https://github.com/bkzl/lrug.pl'
+    = javascript_include_tag "http://maps.googleapis.com/maps/api/js?sensor=false"
+    = javascript_include_tag "application"
