@@ -10,5 +10,6 @@ feature "Welcome page" do
     page.should have_css('#address p', text: 'Łąkowa 11, biuro Ragnarson')
     page.should have_css('#date p', text: '20 października 2011, 16:30+')
     page.should have_css('footer p', text: 'archiwum lrug | kod źródłowy')
+    page.find('footer p').should have_link('kod źródłowy', href: 'https://github.com/bkzl/lrug.pl')
   end
 end
