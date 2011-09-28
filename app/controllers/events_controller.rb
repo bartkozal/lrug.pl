@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
   def index
-    @events = Event.includes(:presentations).order("planned_at DESC")
+    @events = Event.all
   end
 end
