@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110928190131) do
+ActiveRecord::Schema.define(:version => 20110928225305) do
 
   create_table "events", :force => true do |t|
     t.datetime "planned_at"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20110928190131) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "link"
   end
 
   create_table "users", :force => true do |t|

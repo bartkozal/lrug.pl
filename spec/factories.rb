@@ -5,6 +5,7 @@ FactoryGirl.define do
 
   factory :presentation do
     topic "Lorem ipsum dolor sit amet"
+    link "http://www.example.com"
     event
     user
   end
