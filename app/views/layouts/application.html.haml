@@ -7,10 +7,11 @@
     = csrf_meta_tags
   %body
     %header
-      %h1
-        .lodz Łódź
-        .ruby Ruby
-        .user_group User Group
+      = link_to root_path do
+        %h1
+          .lodz Łódź
+          .ruby Ruby
+          .user_group User Group
     = yield
     %footer
       %ul
