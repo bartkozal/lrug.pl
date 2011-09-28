@@ -5,12 +5,28 @@ require "spec_helper"
 feature "Welcome page" do
   scenario "visit /" do
     visit '/'
-    page.should have_css('header h1', text: 'Łódź Ruby User Group')
-    page.should have_css('ul#presentations')
-    page.should have_css('#address p', text: 'Łąkowa 11, biuro Ragnarson')
-    page.should have_css('#date p', text: '20 października 2011, 16:30+')
-    page.should have_css('footer p', text: 'archiwum lrug | kod źródłowy')
-    page.find('footer p').should have_link('kod źródłowy', href: 'https://github.com/bkzl/lrug.pl')
-    page.find('map').should be_true
+
+    page.should have_content('Łódź Ruby User Group')
+
+    within '.info' do
+      page.should have_content('20 października 2011, 16:30')
+      page.should have_content('Łąkowa 11, biuro Ragnarson, 2. piętro')
+      page.should have_content('1. klatka, ceglany budynek na środku podwórka')
+    end
+
+    page.should have_selector('.map')
+
+    within 'ol.presentations' do
+      page.should have_selector('.presentation', count: 3)
+      within 'li.presentation' do
+        page.should have_selector('.topic')
+        page.should have_selector('.author')
+      end
+    end
+
+    within 'footer' do
+      page.should have_content('wcześniejsze prezentacje')
+      page.should have_link('kod źródłowy', href: 'https://github.com/bkzl/lrug.pl')
+    end
   end
 end
