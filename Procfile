@@ -1,2 +1,3 @@
 guard: guard
-spork: 
+spork: spork
+rails: rails s
