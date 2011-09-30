@@ -15,8 +15,8 @@ feature "Welcome page" do
 
     within '.info' do
       page.should have_content('1 września 2011, 10:00')
-      page.should have_content('Łąkowa 11, biuro Ragnarson, 2. piętro')
-      page.should have_content('1. klatka, ceglany budynek na środku podwórka')
+      page.should have_content('Łąkowa 11, biuro Ragnarson, 1. piętro')
+      page.should have_content('Budynek główny (ceglany), 1. klatka')
     end
 
     page.should have_selector('.map')
