@@ -21,8 +21,8 @@ feature 'administration panel' do
     select '06', from: 'event_planned_at_4i'
     select '30', from: 'event_planned_at_5i'
     click_button 'zaplanuj'
-    page.current_path.should == admin_path
-    page.should have_content("30 listopada 2011, 06:30 usuń")
+    page.current_path.should == root_path
+    page.should have_selector('.presentation', count: 3)
   end
 
   scenario 'create fails' do

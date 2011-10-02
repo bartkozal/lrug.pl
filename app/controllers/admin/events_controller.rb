@@ -9,7 +9,7 @@ class Admin::EventsController < ApplicationController
   def create
     @event = Event.new(params[:event])
     if @event.save
-      redirect_to admin_path
+      redirect_to root_path
     else
       redirect_to admin_path, alert: "Event nie został stworzony"
     end
