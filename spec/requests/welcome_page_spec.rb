@@ -4,8 +4,7 @@ require "spec_helper"
 
 feature "welcome page" do
   background do
-    event = create(:event)
-    create_list(:presentation, 3, event: event)
+    create(:presentation)
   end
 
   scenario "visit root path" do
@@ -22,7 +21,7 @@ feature "welcome page" do
     page.should have_selector('.map')
 
     within 'ol.presentations' do
-      page.should have_selector('.presentation', count: 3)
+      page.should have_selector('.presentation')
       within 'li.presentation' do
         page.should have_selector('.topic')
         page.should have_selector('.author')

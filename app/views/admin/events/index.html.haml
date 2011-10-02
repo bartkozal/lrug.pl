@@ -1,0 +1,5 @@
+= form_for [:admin, @event] do |f|
+  = f.datetime_select :planned_at, :include_blank => true
+  = f.submit 'zaplanuj'
+
+%ul= render @events

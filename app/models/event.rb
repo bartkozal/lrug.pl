@@ -1,6 +1,6 @@
 class Event < ActiveRecord::Base
   has_many :presentations
-  validate :planned_at, presence: true, uniqueness: true
+  validates_presence_of :planned_at
   default_scope includes(:presentations).order("planned_at DESC")
 
   def date
@@ -14,6 +14,6 @@ class Event < ActiveRecord::Base
   private
 
   def format_planned_at_with(pattern)
-    I18n.localize(self.planned_at, format: pattern).strip
+    I18n.localize(planned_at, format: pattern).strip
   end
 end
