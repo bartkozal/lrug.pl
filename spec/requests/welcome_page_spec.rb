@@ -2,13 +2,13 @@
 
 require "spec_helper"
 
-feature "Welcome page" do
+feature "welcome page" do
   background do
     event = create(:event)
     create_list(:presentation, 3, event: event)
   end
 
-  scenario "open lrug.pl" do
+  scenario "visit root path" do
     visit '/'
 
     page.should have_content('Łódź Ruby User Group')
@@ -35,7 +35,7 @@ feature "Welcome page" do
     end
   end
 
-  scenario "click link 'wcześniejsze prezentacje'" do
+  scenario "click link to previous events" do
     visit '/'
     click_link 'wcześniejsze prezentacje'
     current_path.should == events_path
