@@ -13,5 +13,7 @@ FactoryGirl.define do
   factory :user do
     first_name "Johnny"
     last_name "Cash"
+
+    factory(:user_with_company) { company "Apple" }
   end
 end
