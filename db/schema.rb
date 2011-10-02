@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111002161932) do
+ActiveRecord::Schema.define(:version => 20111002205107) do
 
   create_table "events", :force => true do |t|
     t.datetime "planned_at"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(:version => 20111002161932) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "link"
+    t.boolean  "empty",      :default => false
   end
 
   create_table "users", :force => true do |t|

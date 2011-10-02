@@ -25,7 +25,7 @@ feature 'administration panel' do
     page.should have_selector('.presentation', count: 3)
   end
 
-  scenario 'create fails' do
+  scenario 'create event fails' do
     visit admin_path
     click_button 'zaplanuj'
     page.current_path.should == admin_path
