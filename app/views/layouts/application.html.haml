@@ -6,6 +6,7 @@
     = stylesheet_link_tag "application"
     = csrf_meta_tags
   %body
+    = link_to 'login via gh', 'auth/github'
     %header
       = link_to root_path do
         %h1

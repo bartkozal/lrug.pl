@@ -6,5 +6,6 @@ LrugPl::Application.routes.draw do
     resources :events, :only => [:index, :create, :destroy]
   end
   get 'admin' => 'admin/events#index', :as => :admin
+  match '/auth/github/callback' => 'sessions#create'
   root :to => 'welcomes#show'
 end

@@ -5,7 +5,8 @@ gem 'sqlite3'
 gem 'jquery-rails'
 gem 'haml-rails'
 gem 'rspec-rails', :group => [:test, :development]
-gem "polish", ">= 0.1.0"
+gem 'polish'
+gem 'omniauth'
 
 group :assets do
   gem 'sass-rails', "  ~> 3.1.0"
