@@ -1,4 +1,5 @@
 = form_for @presentation do |f|
+  %p= "Zalogowany jako: #{current_user}"
   = f.label :topic, 'Temat prezentacji'
   = f.text_field :topic
   = f.submit 'zgłoś'
