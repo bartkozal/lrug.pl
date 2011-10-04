@@ -1,6 +1,9 @@
 %li.presentation
-  - if presentation.user.blank?
-    .topic= link_to 'zgłoś się do prezentacji', edit_presentation_path(presentation)
-  - else
-    .topic= link_to_presentation(presentation)
+  - if presentation.user
+    .topic
+      = link_to_presentation(presentation)
+      - if current_user.try(:lecture?, presentation)
+        = link_to 'edytuj tytuł', edit_presentation_path(presentation)
     .author= presentation.user
+  - else
+    .topic= link_to 'zgłoś się do prezentacji', edit_presentation_path(presentation)

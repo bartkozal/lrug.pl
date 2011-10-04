@@ -3,18 +3,22 @@
 require 'spec_helper'
 
 feature 'reporting presentation' do
-  before do
+  background do
+    User.stub(:create_with_omniauth) { create(:user) }
     create(:event)
-    @user = create(:user)
   end
 
-  scenario 'login by GitHub account and send presentation title' do
+  scenario "login by GitHub account and send presentation title" do
     visit '/'
-    click_link 'zgłoś się do prezentacji'
-    current_path.should == new_presentation_path
-    current_path.should have_selector('.new_presentation')
-    click_button 'zatwierdź'
-    current_path.should == root_path
-    page.should have_content(@user)
+    click_link('zgłoś się do prezentacji')
+    current_path.should == edit_presentation_path(Presentation.first)
+    page.should have_content('Johnny Cash, Apple')
+    fill_in 'presentation_topic', with: 'Ruby imba'
+    click_button 'zgłoś'
+    within '.presentation' do
+      page.should have_css('.topic', text: 'Ruby imba')
+      page.should have_css('.author', text: 'Johnny Cash, Apple')
+      page.should have_link('edytuj tytuł')
+    end
   end
 end

@@ -11,7 +11,8 @@ FactoryGirl.define do
   end
 
   factory :user do
+    uid '12345'
     name "Johnny Cash"
-    factory(:user_with_company) { company "Apple" }
+    company "Apple"
   end
 end

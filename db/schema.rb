@@ -26,7 +26,6 @@ ActiveRecord::Schema.define(:version => 20111003001730) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "link"
-    t.boolean  "empty",      :default => false
   end
 
   create_table "users", :force => true do |t|

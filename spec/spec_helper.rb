@@ -8,6 +8,8 @@ Spork.prefork do
 
   Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
+  OmniAuth.config.test_mode = true
+
   RSpec.configure do |config|
     config.include Factory::Syntax::Methods
     config.mock_with :rspec

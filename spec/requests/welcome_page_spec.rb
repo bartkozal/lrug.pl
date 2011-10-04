@@ -4,7 +4,7 @@ require "spec_helper"
 
 feature "welcome page" do
   background do
-    create(:presentation)
+    create(:event)
   end
 
   scenario "visit root path" do
@@ -22,10 +22,7 @@ feature "welcome page" do
 
     within 'ol.presentations' do
       page.should have_selector('.presentation')
-      within 'li.presentation' do
-        page.should have_selector('.topic')
-        page.should have_selector('.author')
-      end
+      find('li.presentation').should have_link('zgłoś się do prezentacji')
     end
 
     within 'footer' do

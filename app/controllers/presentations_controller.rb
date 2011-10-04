@@ -3,9 +3,13 @@
 class PresentationsController < ApplicationController
   def edit
     @presentation = Presentation.find(params[:id])
-    unless current_user
+    if current_user.blank?
       session[:presentation_id] = @presentation.id
       redirect_to '/auth/github'
+    elsif session[:presentation_id] == @presentation.id || current_user.lecture?(@presentation)
+      render :action => 'edit'
+    else
+      redirect_to root_path
     end
   end
 
