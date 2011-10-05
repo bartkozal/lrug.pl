@@ -1,3 +1,5 @@
+require 'capistrano_colors'
+
 set :application, "lrug"
 set :user, "wijet-web"
 set :deploy_to, "/home/wijet-web/lrug"
