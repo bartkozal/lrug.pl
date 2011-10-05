@@ -7,7 +7,7 @@
     = csrf_meta_tags
   %body
     .github
-      = link_to "Wyloguj", logout_path if current_user
+      = link_to "Wyloguj", logout_path, :class => 'button big danger' if current_user
     %header
       = link_to root_path do
         %h1

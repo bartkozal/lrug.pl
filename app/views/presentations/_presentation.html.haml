@@ -3,7 +3,7 @@
     .topic
       = link_to_presentation(presentation)
       - if current_user.try(:lecture?, presentation)
-        = link_to 'edytuj tytuł', edit_presentation_path(presentation)
+        = link_to 'edytuj tytuł', edit_presentation_path(presentation), :class => 'button'
     .author= presentation.user
   - else
-    .topic= link_to 'zgłoś się do prezentacji', edit_presentation_path(presentation)
+    .topic= link_to 'zgłoś się do prezentacji', edit_presentation_path(presentation), :class => 'button big danger'
