@@ -2,9 +2,5 @@ rvm:
   - 1.9.2
   - 1.9.3
 script: bundle exec rake db:drop db:create db:migrate spec
-branches:
-  only:
-    - master
 notifications:
-  recipients:
-    - bartlomiejkozal@gmail.com
+  email: bartlomiejkozal@gmail.com
