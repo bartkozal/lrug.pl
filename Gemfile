@@ -14,6 +14,11 @@ group :assets do
   gem 'uglifier'
 end
 
+group :development do
+  gem 'capistrano'
+  gem 'capistrano_colors'
+end
+
 group :test do
   gem 'capybara'
   gem 'factory_girl_rails'
