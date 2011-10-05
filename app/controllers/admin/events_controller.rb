@@ -1,6 +1,6 @@
 # encoding: UTF-8
 
-class Admin::EventsController < ApplicationController
+class Admin::EventsController < Admin::BasicAuthController
   def index
     @event = Event.new
     @events = Event.all
