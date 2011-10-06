@@ -29,3 +29,7 @@ group :test do
   gem 'guard-livereload'
   gem 'growl'
 end
+
+group :production do
+  gem 'therubyracer'
+end
