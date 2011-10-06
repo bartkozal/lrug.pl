@@ -1,4 +1,9 @@
+$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
 require 'capistrano_colors'
+require 'rvm/capistrano'
+require 'bundler/capistrano'
+set :rvm_ruby_string, 'ruby-1.9.2-p290@lrug'
+set :rvm_type, :user
 
 set :application, "lrug"
 set :user, "wijet-web"
@@ -6,22 +11,32 @@ set :deploy_to, "/home/wijet-web/lrug"
 set :domain, "#{application}.pl"
 
 set :scm, :git
-set :repository, "git@sandbox.wijet.pl:lrug.git"
+set :repository, "git://github.com/bkzl/lrug.pl.git"
 set :branch, "master"
 set :use_sudo, false
 
-role :web, domain # Your HTTP server, Apache/etc
-role :app, domain # This may be the same as your `Web` server
-role :db, domain, :primary => true # This is where Rails migrations will run
+role :web, domain
 
-# if you're still using the script/reaper helper you will need
-# these http://github.com/rails/irs_process_scripts
+after "deploy:finalize_update", "deploy:link"
 
-# If you are using Passenger mod_rails uncomment this:
-# namespace :deploy do
-#   task :start do ; end
-#   task :stop do ; end
-#   task :restart, :roles => :app, :except => { :no_release => true } do
-#     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
-#   end
-# end
+namespace :deploy do
+  task :link do
+    run "ln -nfs #{shared_path}/config/basic_auth.yml #{latest_release}/config/basic_auth.yml"
+    run "ln -nfs #{shared_path}/config/omniauth.yml #{latest_release}/config/omniauth.yml"
+  end
+
+  task :restart do
+    thin.stop
+    thin.start
+  end
+
+  namespace :thin do
+    task :start do
+      run "cd #{latest_release} && bundle exec thin start -d -p 8989 -e production -P tmp/pids/thin.pid"
+    end
+
+    task :stop do
+      run "cd #{latest_release} && bundle exec thin stop -P tmp/pids/thin.pid"
+    end
+  end
+end
