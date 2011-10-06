@@ -32,4 +32,5 @@ end
 
 group :production do
   gem 'therubyracer'
+  gem 'thin'
 end
