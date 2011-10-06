@@ -11,7 +11,7 @@ class Admin::EventsController < Admin::BasicAuthController
     if @event.save
       redirect_to root_path
     else
-      redirect_to admin_path, alert: "Event nie został stworzony"
+      redirect_to admin_path, alert: "Event nie został utworzony"
     end
   end
 

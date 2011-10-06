@@ -14,7 +14,7 @@ feature 'reporting presentation' do
     current_path.should == edit_presentation_path(Presentation.first)
     page.should have_content('Johnny Cash, Apple')
     fill_in 'presentation_topic', with: 'Ruby imba'
-    click_button 'zgłoś'
+    click_button 'zapisz'
     within '.presentation' do
       page.should have_css('.topic', text: 'Ruby imba')
       page.should have_css('.author', text: 'Johnny Cash, Apple')

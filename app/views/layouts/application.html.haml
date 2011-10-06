@@ -7,15 +7,19 @@
     = csrf_meta_tags
   %body
     .github
-      = link_to "Wyloguj", logout_path, :class => 'button big danger' if current_user
+      - unless current_user
+        = link_to "Zaloguj przez GitHub", '/auth/github', :class => 'button big danger'
+      - else
+        = link_to "Wyloguj", logout_path, :class => 'button big danger'
     %header
       = link_to root_path do
         %h1
           .lodz Łódź
           .ruby Ruby
           .user_group User Group
-    .alert= flash.alert
-    = yield
+    .main
+      = yield
+    = content_tag(:div, flash.alert, :class => 'alert') if flash.alert
     %footer
       %ul
         %li>=link_to 'wcześniejsze prezentacje', events_path

@@ -13,7 +13,7 @@ feature "welcome page" do
     page.should have_content('Łódź Ruby User Group')
 
     within '.info' do
-      page.should have_content('1 września 2011, 10:00')
+      page.should have_content('1 września 2020, 10:00')
       page.should have_content('Łąkowa 11, biuro Ragnarson, 1. piętro')
       page.should have_content('Budynek główny (ceglany), 1. klatka')
     end
@@ -21,7 +21,6 @@ feature "welcome page" do
     page.should have_selector('.map')
 
     within 'ol.presentations' do
-      page.should have_selector('.presentation')
       find('li.presentation').should have_link('zgłoś się do prezentacji')
     end
 
@@ -38,8 +37,8 @@ feature "welcome page" do
     within 'ol.events' do
       page.should have_selector('.event')
       within 'li.event' do
-        page.should have_selector('.date', text: '1 września 2011')
-        page.should have_selector('ul.presentations')
+        page.should have_selector('.date', text: '1 września 2020')
+        page.should have_selector('ol.presentations')
       end
     end
   end

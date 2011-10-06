@@ -14,8 +14,6 @@ class User < ActiveRecord::Base
   end
 
   def to_s
-    name.tap do |personal_details|
-      personal_details << ", #{company}" unless company.blank?
-    end
+    company.present? ? "#{name}, #{company}" : name
   end
 end

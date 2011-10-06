@@ -1,5 +1,7 @@
 = form_for @presentation do |f|
-  %p= "Zalogowany jako: #{current_user}"
-  = f.label :topic, 'Temat prezentacji'
-  = f.text_field :topic
-  = f.submit 'zgłoś', :class => 'button'
+  %p
+    Zalogowany jako:
+    %strong= current_user
+  = f.text_field :topic, :placeholder => 'Wpisz  temat prezentacji'
+  .submit
+    = f.submit 'zapisz', :class => 'button big danger'

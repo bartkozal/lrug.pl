@@ -20,7 +20,8 @@ class PresentationsController < ApplicationController
     if @presentation.save
       redirect_to root_path
     else
-      render :action => 'edit', :alert => "Prezentacja nie została zgłoszona"
+      flash.now.alert = 'Prezentacja nie została zgłoszona'
+      render :action => 'edit'
     end
   end
 end

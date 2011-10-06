@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :event do
-    planned_at Time.zone.local(2011, 9, 1, 10, 0, 0)
+    planned_at Time.zone.local(2020, 9, 1, 10, 0, 0)
   end
 
   factory :presentation do

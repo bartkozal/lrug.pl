@@ -12,7 +12,7 @@ feature 'administration panel' do
   scenario 'list events' do
     page.should have_selector('form.new_event')
     within 'ul li' do
-      page.should have_content('1 września 2011, 10:00')
+      page.should have_content('1 września 2020, 10:00')
       page.should have_link('usuń')
     end
   end
@@ -31,7 +31,7 @@ feature 'administration panel' do
   scenario 'create event fails' do
     click_button 'zaplanuj'
     page.current_path.should == admin_path
-    page.should have_content("Event nie został stworzony")
+    page.should have_content("Event nie został utworzony")
   end
 
   scenario 'delete event' do
