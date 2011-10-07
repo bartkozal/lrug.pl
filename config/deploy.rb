@@ -32,7 +32,7 @@ namespace :deploy do
 
   namespace :thin do
     task :start do
-      run "cd #{latest_release} && bundle exec thin start -d -p 8989 -e production -P tmp/pids/thin.pid"
+      run "cd #{latest_release} && bundle exec thin start -d -c #{latest_release} -p 8989 -e production -P tmp/pids/thin.pid"
     end
 
     task :stop do
