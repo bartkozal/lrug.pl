@@ -23,6 +23,7 @@ namespace :deploy do
   task :link do
     run "ln -nfs #{shared_path}/config/basic_auth.yml #{latest_release}/config/basic_auth.yml"
     run "ln -nfs #{shared_path}/config/omniauth.yml #{latest_release}/config/omniauth.yml"
+    run "ln -nfs #{shared_path}/config/database.yml #{latest_release}/config/database.yml"
   end
 
   task :restart do
