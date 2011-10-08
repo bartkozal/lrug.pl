@@ -20,24 +20,21 @@ role :web, domain
 after "deploy:finalize_update", "deploy:link"
 
 namespace :deploy do
-  task :link do
-    run "ln -nfs #{shared_path}/config/basic_auth.yml #{latest_release}/config/basic_auth.yml"
-    run "ln -nfs #{shared_path}/config/omniauth.yml #{latest_release}/config/omniauth.yml"
-    run "ln -nfs #{shared_path}/config/database.yml #{latest_release}/config/database.yml"
+  task :restart do
+    thin.restart
   end
 
-  task :restart do
-    thin.stop
-    thin.start
+  task :link do
+    %w(basic_auth omniauth database thin).each do |filename|
+      run "ln -nfs #{shared_path}/config/#{filename}.yml #{latest_release}/config/#{filename}.yml"
+    end
   end
 
   namespace :thin do
-    task :start do
-      run "cd #{latest_release} && bundle exec thin start -d -c #{latest_release} -p 8989 -e production -P tmp/pids/thin.pid"
-    end
-
-    task :stop do
-      run "cd #{latest_release} && bundle exec thin stop -P tmp/pids/thin.pid"
+    %w(start stop restart).each do |action|
+      task action do
+        run "cd #{latest_release} && bundle exec thin #{action} -C #{latest_release}/config/thin.yml"
+      end
     end
   end
 end
