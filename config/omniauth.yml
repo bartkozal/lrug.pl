@@ -1,0 +1,8 @@
+development:
+  github:
+    client_id: 79576eac8193c20f5b43
+    secret: 80b641f0edbef17cc1dbf17ecc0d91d831d2b0c4
+test:
+  github:
+    client_id: 79576eac8193c20f5b43
+    secret: 80b641f0edbef17cc1dbf17ecc0d91d831d2b0c4
