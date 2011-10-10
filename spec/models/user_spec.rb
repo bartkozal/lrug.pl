@@ -8,4 +8,12 @@ describe User do
   it "returns company if exist" do
     build(:user).to_s.should == "Johnny Cash, Apple"
   end
+
+  it "#create_with_omniauth" do
+    pending
+  end
+
+  it "#lecture?" do
+    pending
+  end
 end

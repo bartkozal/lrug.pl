@@ -14,4 +14,8 @@ describe Event do
   it "fails validation with blank planned at date" do
     build(:event, :planned_at => nil).should have(1).errors_on(:planned_at)
   end
+
+  it "creates 3 presentations after create event" do
+    pending
+  end
 end
