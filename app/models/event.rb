@@ -15,7 +15,7 @@ class Event < ActiveRecord::Base
   private
 
   def create_presentations
-    3.times { self.presentations << Presentation.new }
+    3.times { presentations << Presentation.new }
   end
 
   def format_planned_at_with(pattern)

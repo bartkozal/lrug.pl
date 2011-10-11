@@ -4,6 +4,7 @@ LrugPl::Application.routes.draw do
   resources :presentations, :only => [:edit, :update]
   namespace :admin do
     resources :events, :only => [:index, :create, :destroy]
+    resources :presentations, :only => :destroy
   end
   get '/admin' => 'admin/events#index'
   get '/auth/github/callback' => 'sessions#create'

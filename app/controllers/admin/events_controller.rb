@@ -17,6 +17,7 @@ class Admin::EventsController < Admin::BasicAuthController
 
   def destroy
     @event = Event.find(params[:id])
-    redirect_to admin_path if @event.destroy
+    @event.destroy
+    redirect_to admin_path, alert: "Event usunięty"
   end
 end

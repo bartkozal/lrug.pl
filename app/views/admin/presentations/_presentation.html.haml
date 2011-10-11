@@ -1,0 +1,4 @@
+- unless presentation.topic.blank?
+  %li
+    = presentation
+    = link_to 'usuń', admin_presentation_path(presentation), :method => :delete, :class => 'mini'

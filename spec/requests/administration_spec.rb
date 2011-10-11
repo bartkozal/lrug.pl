@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-feature 'administration panel' do
+feature 'manage events' do
   background do
     create(:event)
     page.driver.header('Authorization', %Q{Basic #{Base64.encode64("admin:example")}})
@@ -37,5 +37,23 @@ feature 'administration panel' do
   scenario 'delete event' do
     click_link 'usuń'
     page.should_not have_content('1 września 2011, 10:00')
+    page.should have_content("Event usunięty")
+  end
+end
+
+feature 'manage presentations' do
+  background do
+    @presentation = create(:presentation)
+    page.driver.header('Authorization', %Q{Basic #{Base64.encode64("admin:example")}})
+  end
+
+  scenario 'delete presentation' do
+    visit root_path
+    page.should have_content(@presentation.topic)
+    visit admin_path
+    find('.list').click_link 'usuń'
+    page.should have_content('Prezentacja usunięta')
+    visit root_path
+    page.should_not have_content(@presentation.topic)
   end
 end
