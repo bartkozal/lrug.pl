@@ -9,6 +9,12 @@ Spork.prefork do
   Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
   OmniAuth.config.test_mode = true
+  OmniAuth.config.mock_auth[:github] = {
+    'uid' => '123545',
+    'provider' => 'github',
+    'user_info' => { 'name' => 'Steve Jobs' },
+    'extra' => { 'user_hash' => { 'company' => 'Apple' }}
+  }
 
   RSpec.configure do |config|
     config.include Factory::Syntax::Methods
