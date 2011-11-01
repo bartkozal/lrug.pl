@@ -47,6 +47,17 @@ feature 'manage presentations' do
     page.driver.header('Authorization', %Q{Basic #{Base64.encode64("admin:example")}})
   end
 
+  scenario 'edit presentation' do
+    visit admin_path
+    find('.list').click_link 'edytuj'
+    fill_in 'Temat', with: 'Nowy temat'
+    fill_in 'Link', with: 'http://www.example.com'
+    click_button 'Edytuj'
+    page.should have_content('Prezentacja zmieniona')
+    visit root_path
+    page.should have_link('Nowy temat', href: 'http://www.example.com')
+  end
+
   scenario 'delete presentation' do
     visit root_path
     page.should have_content(@presentation.topic)

@@ -12,7 +12,7 @@ class Event < ActiveRecord::Base
     format_planned_at_with "%e %B %Y, %H:%M"
   end
 
-  private
+private
 
   def create_presentations
     3.times { presentations << Presentation.new }
