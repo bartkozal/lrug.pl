@@ -1,5 +1,8 @@
-rvm: 1.9.2
+rvm:
+  - 1.9.2
+  - 1.9.3
+  - ruby-head
 script: bundle exec rake db:create db:migrate spec
 notifications:
   email:
-    - bartlomiejkozal@gmail.com
+    - bkzl@me.com
