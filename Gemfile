@@ -22,12 +22,6 @@ end
 group :test do
   gem 'capybara'
   gem 'factory_girl_rails'
-  gem 'spork', '~> 0.9.0.rc'
-  gem 'guard-rails'
-  gem 'guard-spork'
-  gem 'guard-rspec'
-  gem 'guard-livereload'
-  gem 'growl'
 end
 
 group :production do
