@@ -1,4 +1,4 @@
-$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
+$:.unshift(File.expand_path('../../vendor/plugins', __FILE__))
 require 'capistrano_colors'
 require 'rvm/capistrano'
 require 'bundler/capistrano'
