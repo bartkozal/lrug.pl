@@ -7,6 +7,7 @@ gem 'haml-rails'
 gem 'rspec-rails', :group => [:test, :development]
 gem 'polish'
 gem 'omniauth'
+gem 'omniauth-github'
 
 group :assets do
   gem 'sass-rails', '~> 3.2.3'
