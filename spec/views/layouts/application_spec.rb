@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe 'layouts/application.html.haml' do
+describe 'layouts/application' do
   before do
     view.stub(current_user: nil)
     render

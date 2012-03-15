@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe "welcomes/show.html.haml" do
+describe "welcomes/show" do
   it 'displays welcome page' do
     assign(:event, create(:event))
     render

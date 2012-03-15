@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe "events/index.html.haml" do
+describe "events/index" do
   it "displays all presentations" do
     assign(:events, create_list(:event, 3))
     render
