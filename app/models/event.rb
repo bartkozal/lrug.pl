@@ -4,6 +4,8 @@ class Event < ActiveRecord::Base
   default_scope includes(:presentations).order("planned_at DESC")
   after_save :create_presentations
 
+  attr_accessible :planned_at
+
   def date
     format_planned_at_with "%e %B %Y"
   end
