@@ -62,7 +62,7 @@ feature 'manage presentations' do
     visit root_path
     page.should have_content(@presentation.topic)
     visit admin_path
-    find('.list').click_link 'usuń'
+    4.times { find('.list').click_link 'usuń' }
     page.should have_content('Prezentacja usunięta')
     visit root_path
     page.should_not have_content(@presentation.topic)
