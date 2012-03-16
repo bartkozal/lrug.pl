@@ -4,7 +4,7 @@ class Presentation < ActiveRecord::Base
   delegate :planned_at, :to => :event
   validates_presence_of :topic, :on => :update
 
-  attr_accessible :topic, :link
+  attr_accessible :topic, :link, :user_id
 
   def deprecated?
     planned_at < Time.zone.now
