@@ -9,8 +9,8 @@ OmniAuth.config.test_mode = true
 OmniAuth.config.mock_auth[:github] = {
   'uid' => '123545',
   'provider' => 'github',
-  'user_info' => { 'name' => 'Steve Jobs' },
-  'extra' => { 'user_hash' => { 'company' => 'Apple' }}
+  'info' => { 'name' => 'Steve Jobs' },
+  'extra' => { 'raw_info' => { 'company' => 'Apple' }}
 }
 
 RSpec.configure do |config|

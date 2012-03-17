@@ -2,3 +2,7 @@ development:
   github:
     client_id: 68328a3a1b722df656e4
     secret: 241f734dd379a83806320a8c8a4c22519cc38611
+test:
+  github:
+    client_id: 68328a3a1b722df656e4
+    secret: 241f734dd379a83806320a8c8a4c22519cc38611
