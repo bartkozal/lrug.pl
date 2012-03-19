@@ -20,12 +20,12 @@ describe Presentation do
   context "deprecation" do
     it "returns false before event" do
       presentation.stub(planned_at: 1.day.from_now)
-      presentation.deprecated?.should be_false
+      presentation.outdated?.should be_false
     end
 
     it "returns true after event" do
       presentation.stub(planned_at: 1.day.ago)
-      presentation.deprecated?.should be_true
+      presentation.outdated?.should be_true
     end
   end
 end

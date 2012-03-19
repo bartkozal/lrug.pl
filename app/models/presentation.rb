@@ -6,7 +6,7 @@ class Presentation < ActiveRecord::Base
 
   attr_accessible :topic, :link, :user_id
 
-  def deprecated?
+  def outdated?
     planned_at < Time.zone.now
   end
 

@@ -6,4 +6,5 @@
         = link_to 'edytuj tytuł', edit_presentation_path(presentation), :class => 'mini'
     .author= presentation.user
   - else
-    .topic= link_to 'zgłoś się do prezentacji', edit_presentation_path(presentation), :class => 'button big danger'
+    - unless presentation.outdated?
+      .topic= link_to 'zgłoś się do prezentacji', edit_presentation_path(presentation), :class => 'button big danger'
