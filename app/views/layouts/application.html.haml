@@ -32,7 +32,11 @@
     = content_tag(:div, flash.alert, :class => 'alert') if flash.alert
     %footer
       %ul
-        %li>=link_to 'wcześniejsze prezentacje', events_path
-        %li= link_to 'kod źródłowy strony', 'https://github.com/bkzl/lrug.pl'
+        %li
+          %iframe{src: "http://markdotto.github.com/github-buttons/github-btn.html?user=bkzl&repo=lrug.pl&type=fork&count=true",
+            allowtransparency: "true", frameborder: "0", scrolling: "0", width: "80px", height: "20px"}
+        %li
+          %iframe{src: "http://markdotto.github.com/github-buttons/github-btn.html?user=bkzl&repo=lrug.pl&type=watch&count=true",
+            allowtransparency: "true", frameborder: "0", scrolling: "0", width: "90px", height: "20px"}
     = javascript_include_tag "http://maps.googleapis.com/maps/api/js?sensor=false"
     = javascript_include_tag "application"
