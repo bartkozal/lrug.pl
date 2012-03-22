@@ -2,4 +2,12 @@
   = f.datetime_select :planned_at, :include_blank => true
   = f.submit 'zaplanuj'
 
+%section.todo
+  %h1 Lista rzeczy do zrobienia:
+  %ul
+    %li Założyć wątek na forum RoR
+    %li Założyć event na Facebook
+    %li Tweet
+    %li Napisać na grupie dyskusyjnej JUGu
+
 %ul= render @events
