@@ -32,7 +32,7 @@ feature 'manage events' do
 
   scenario 'display todo list' do
     create_event
-    page.should have_content('Lista rzeczy do zrobienia:')
+    page.should have_content('Lista zadań do zrobienia:')
     page.should have_content('Założyć wątek na forum RoR')
     page.should have_content('Założyć event na Facebook')
     page.should have_content('Tweet')

@@ -20,4 +20,8 @@ describe Event do
   it "saves 3 presentations after create" do
     expect { event.save }.to change{ event.presentations.count }.by(3)
   end
+
+  it "saves default tasks after create" do
+    expect { event.save }.to change{ event.tasks.count }.by(4)
+  end
 end

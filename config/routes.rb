@@ -3,7 +3,11 @@ LrugPl::Application.routes.draw do
   resources :events, :only => :index
   resources :presentations, :only => [:edit, :update]
   namespace :admin do
-    resources :events, :only => [:index, :create, :destroy]
+    resources :events, :only => [:index, :create, :destroy] do
+      member do
+        put :tasks
+      end
+    end
     resources :presentations, :only => [:edit, :update, :destroy]
   end
   get '/admin' => 'admin/events#index'
