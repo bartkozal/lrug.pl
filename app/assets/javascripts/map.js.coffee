@@ -1,6 +1,5 @@
 getMap = ->
-  position = new google.maps.LatLng 51.76134, 19.43910
-
+  position = new google.maps.LatLng 51.766074,19.454556
   mapSettings = {
     zoom: 15,
     center: position,
