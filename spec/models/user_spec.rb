@@ -8,10 +8,6 @@ describe User do
     user.to_s.should == "Johnny Cash"
   end
 
-  it "returns company if exist" do
-    user.to_s.should == "Johnny Cash, Apple"
-  end
-
   it "create user with omniauth" do
     User.create_with_omniauth(OmniAuth.config.mock_auth[:github])
     last_user = User.last

@@ -14,6 +14,6 @@ class User < ActiveRecord::Base
   end
 
   def to_s
-    company.present? ? "#{name}, #{company}" : name
+    name
   end
 end

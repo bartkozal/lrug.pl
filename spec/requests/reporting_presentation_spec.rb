@@ -12,12 +12,12 @@ feature 'reporting presentation' do
     visit '/'
     click_link('zgłoś się do prezentacji')
     current_path.should == edit_presentation_path(Presentation.first)
-    page.should have_content('Johnny Cash, Apple')
+    page.should have_content('Johnny Cash')
     fill_in 'presentation_topic', with: 'Ruby imba'
     click_button 'zapisz'
     within '.presentation' do
       page.should have_css('.topic', text: 'Ruby imba')
-      page.should have_css('.author', text: 'Johnny Cash, Apple')
+      page.should have_css('.author', text: 'Johnny Cash')
       page.should have_link('edytuj tytuł')
     end
   end
