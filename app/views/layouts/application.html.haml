@@ -30,14 +30,6 @@
     .main
       = yield
     = content_tag(:div, flash.alert, :class => 'alert') if flash.alert
-    %footer
-      %ul
-        %li
-          %iframe{src: "http://markdotto.github.com/github-buttons/github-btn.html?user=bkzl&repo=lrug.pl&type=fork&count=true",
-            allowtransparency: "true", frameborder: "0", scrolling: "0", width: "80px", height: "20px"}
-        %li
-          %iframe{src: "http://markdotto.github.com/github-buttons/github-btn.html?user=bkzl&repo=lrug.pl&type=watch&count=true",
-            allowtransparency: "true", frameborder: "0", scrolling: "0", width: "90px", height: "20px"}
     = javascript_include_tag "http://maps.googleapis.com/maps/api/js?sensor=false"
     = javascript_include_tag "application"
     = link_to image_tag('https://shellycloud.com/assets/badge.png'), 'https://shellycloud.com', style: 'position: fixed; top: 0; right:0;'
