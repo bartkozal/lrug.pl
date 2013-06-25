@@ -2,9 +2,4 @@
 
 Homepage for ruby user group from my home city.
 
-Features:
-
- * reporting presentation
- * integration with GitHub
-
-Feel free to fork it and use for your local ruby group!
+Feel free to fork!
