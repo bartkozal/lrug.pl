@@ -1,6 +1,0 @@
-development:
-  name: admin
-  password: example
-test:
-  name: admin
-  password: example
