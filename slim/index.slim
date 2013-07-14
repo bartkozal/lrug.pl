@@ -5,13 +5,14 @@ html
     title None
     link href="components/normalize-css/normalize.css" rel="stylesheet" type="text/css"
     link href="components/vessel/vessel.css" rel="stylesheet" type="text/css"
-    link href="css/style.css" rel="stylesheet" type="text/css"
+    link href="stylesheets/style.css" rel="stylesheet" type="text/css"
 
   body
     .wrap
       .grid
         .three-fifths
           h1 Łódź Ruby User Group
+          h2 Następne spotkanie
           h3 3 lipca 2012, 18:15
           ol
             li
@@ -24,11 +25,8 @@ html
                 ' NoobGameDevel: Historia Mustachio
               span class="author"
                 ' Marcin Baliński, Sebastian Baliński
-          object
-            ' ..put map here..
-          address
-            ' Aleja Kościuszki 32/7, 3. piętro
-
+          h2 Miejsce
+          #map
         .two-fifths
           h2 Archiwum
           h3 2 lutego 2012
@@ -102,4 +100,5 @@ html
               a href="https://shellycloud.com"
                 ' Shelly Cloud
 
+    script src="https://maps.googleapis.com/maps/api/js?sensor=false"
     script src="javascripts/script.js"

@@ -7,7 +7,7 @@
     </title>
     <link href="components/normalize-css/normalize.css" rel="stylesheet" type="text/css" />
     <link href="components/vessel/vessel.css" rel="stylesheet" type="text/css" />
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <div class="wrap">
@@ -16,6 +16,9 @@
           <h1>
             Łódź Ruby User Group
           </h1>
+          <h2>
+            Następne spotkanie
+          </h2>
           <h3>
             3 lipca 2012, 18:15
           </h3>
@@ -27,7 +30,10 @@
               <a href="https://speakerdeck.com/sebastianb/noob-game-development-historia-mustachio">NoobGameDevel: Historia Mustachio </a><span class="author">Marcin Baliński, Sebastian Baliński </span>
             </li>
           </ol>
-          <object>..put map here.. </object><address>Aleja Kościuszki 32/7, 3. piętro </address>
+          <h2>
+            Miejsce
+          </h2>
+          <div id="map"></div>
         </div>
         <div class="two-fifths">
           <h2>
@@ -109,6 +115,7 @@
         </div>
       </div>
     </div>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script src="javascripts/script.js"></script>
   </body>
 </html>
