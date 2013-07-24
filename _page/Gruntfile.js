@@ -3,7 +3,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     watch: {
-      files: ['sass/**/*.sass', 'slim/**/*.slim', 'coffee/**/*.coffee'],
+      files: ['sass/**/*.sass', '**/*.slim', 'coffee/**/*.coffee'],
       tasks: ['slim:dev', 'sass:dev', 'coffee:dev'],
       options: {
         livereload: true
@@ -20,7 +20,7 @@ module.exports = function(grunt) {
             expand: true,
             src: ['**/*.sass'],
             cwd: 'sass/',
-            dest: 'build/stylesheets/',
+            dest: '../stylesheets/',
             ext: '.css'
           }
         ]
@@ -34,7 +34,7 @@ module.exports = function(grunt) {
             expand: true,
             src: ['**/*.coffee'],
             cwd: 'coffee/',
-            dest: 'build/javascripts/',
+            dest: '../javascripts/',
             ext: '.js'
           }
         ]
@@ -50,8 +50,8 @@ module.exports = function(grunt) {
           {
             expand: true,
             src: ['**/*.slim'],
-            cwd: 'slim/',
-            dest: 'build/',
+            cwd: '.',
+            dest: '../',
             ext: '.html'
           }
         ]

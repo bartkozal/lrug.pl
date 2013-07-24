@@ -16,4 +16,3 @@ markerSettings = {
   flat: true
 }
 new google.maps.Marker markerSettings
-
