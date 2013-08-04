@@ -392,6 +392,30 @@ table {
   box-sizing: border-box;
 }
 
+h1, h2, h3, h4, h5, h6, ul, ol, dl, p {
+  margin-top: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-center, .bar {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}
+
 body {
   background: #222222;
   color: white;
@@ -431,20 +455,10 @@ header dl dd {
 }
 
 .bar {
-  text-align: center;
   font: 1.75em "Open Sans Condensed";
   color: #222222;
   background: #e74c3c;
   padding: 0.8em 0;
-}
-
-h1, h2, h3, h4, h5, h6, ul, ol, dl, p {
-  margin-top: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
 }
 
 #map {
