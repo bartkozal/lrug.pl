@@ -9,7 +9,7 @@ html
     .container
       .grid
         .grid__item.one-half.palm-one-whole
-          hgroup
+          hgroup.landmark
             h1
               | Łódź Ruby User Group
             time.gamma.brand-color
@@ -18,13 +18,13 @@ html
               | ul. Pomorska 39 - Miejski punkt kultury PREXER-UŁ
 
           dl.talks
-            dt ...
+            dt TBA
             dd Bartłomiej Kozal
 
-            dt ...
+            dt TBA
             dd Maciej Gałkiewicz
 
-            dt ...
+            dt TBA
             dd Grzesiek Kołodziejczyk
 
           ul.nav.nav--block
@@ -37,6 +37,16 @@ html
 
         .grid__item.one-half.palm-one-whole
           .map.push--top data-map=""
+
+      .sponsors
+        h4 Sponsorzy:
+        ul.sponsors__list
+          li
+            a href="http://binarapps.com"
+              img src="/images/binarapps.png"
+          li
+            a href="https://shellycloud.com"
+              img src="/images/shellycloud.png"
 
     /
       h2 Archiwum
@@ -115,11 +125,6 @@ html
         li
           a href="http://rubyonrails.pl/forum/f22-BRUG"
             ' Białystok
-      h2 Sponsorzy
-      ul
-        li
-          a href="https://shellycloud.com"
-            ' Shelly Cloud
 
     script src="https://maps.googleapis.com/maps/api/js?sensor=false"
     script src="javascripts/script.js"

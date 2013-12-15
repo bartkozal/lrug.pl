@@ -893,7 +893,7 @@ textarea:focus {
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.cf:after, .nav:after {
+.cf:after, .nav:after, .sponsors .sponsors__list:after {
   content: "";
   display: table;
   clear: both;
@@ -1830,12 +1830,13 @@ label,
  * Demo: jsfiddle.net/inuitcss/Vnph4
  *
  */
-.nav {
+.nav, .sponsors .sponsors__list {
   list-style: none;
   margin-left: 0;
 }
-.nav > li,
-.nav > li > a {
+.nav > li, .sponsors .sponsors__list > li,
+.nav > li > a,
+.sponsors .sponsors__list > li > a {
   display: inline-block;
   *display: inline;
   zoom: 1;
@@ -3291,6 +3292,15 @@ h1 {
   font: 36px "Open Sans Condensed";
 }
 
+h2, h3, h4 {
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+img {
+  max-width: 100%;
+}
+
 .container {
   max-width: 980px;
   padding: 0 24px;
@@ -3323,4 +3333,24 @@ h1 {
 }
 .talks dd:before {
   content: "— ";
+}
+
+.sponsors {
+  margin-top: 24px;
+  text-align: center;
+}
+.sponsors .sponsors__list {
+  margin: 0 auto;
+  display: table;
+}
+.sponsors .sponsors__list li {
+  display: table-cell;
+  vertical-align: middle;
+  padding-right: 48px;
+}
+.sponsors .sponsors__list li:last-child {
+  padding-right: 0;
+}
+.sponsors .sponsors__list a:hover {
+  background: transparent;
 }

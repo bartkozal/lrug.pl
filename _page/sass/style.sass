@@ -4,6 +4,7 @@ $body-background: #222
 $body-width: 980px
 
 $brand-color: #E74C3C
+$muted-color: rgba(white, .3)
 $base-font-family: "PT Sans"
 $headings-font-family: "Open Sans Condensed"
 $base-font-size: 18px
@@ -23,12 +24,20 @@ a
   text-decoration: none
   color: white
   transition: all ease .2s
+
   &:hover
     color: $body-background
     background: $brand-color
 
 h1
   font: $h1-size $headings-font-family
+
+h2, h3, h4
+  font-weight: normal
+  color: $muted-color
+
+img
+  max-width: 100%
 
 .container
   max-width: $body-width
@@ -52,9 +61,29 @@ h1
 
   dd
     @include font-size(15px)
-    color: rgba(white, .3)
+    color: $muted-color
     margin-bottom: $base-spacing-unit
     margin-left: 0
 
     &:before
       content: '— '
+
+.sponsors
+  margin-top: $base-spacing-unit
+  text-align: center
+
+  .sponsors__list
+    @extend .nav
+    margin: 0 auto
+    display: table
+
+    li
+      display: table-cell
+      vertical-align: middle
+      padding-right: $base-spacing-unit * 2
+
+      &:last-child
+        padding-right: 0
+
+    a:hover
+      background: transparent
