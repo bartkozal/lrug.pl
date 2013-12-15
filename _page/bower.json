@@ -1,6 +1,6 @@
 {
   "name": "lrug.pl",
   "dependencies": {
-    "vessel": "0.1.0-alpha.6"
+    "inuit.css": "5.0.0"
   }
 }

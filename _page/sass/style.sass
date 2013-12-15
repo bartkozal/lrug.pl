@@ -1,5 +1,3 @@
-@import "../bower_components/normalize-scss/normalize"
-@import "../bower_components/vessel/vessel"
 @import url(http://fonts.googleapis.com/css?family=PT+Sans|Open+Sans+Condensed:700&subset=latin,latin-ext)
 
 body
@@ -8,25 +6,22 @@ body
   font: 100% "PT Sans"
 
 header
-  @include outer-container
-  background: url(/images/code.png) no-repeat right 3em
-  background-size: 512px 512px
   h1
-    font: em(38) "Open Sans Condensed"
+    font: 38px "Open Sans Condensed"
     margin: 2em 0
   dl
-    font-size: em(20)
+    font-size: 20px
     margin-bottom: 4em
     dt
       line-height: 1.5em
     dd
-      font-size: em(16, 20)
+      font-size: 16px
       color: #E74C3C
       margin: .5em 0 2em
 
 .bar
-  @extend .align-center
-  font: em(28) "Open Sans Condensed"
+  text-align: center
+  font: 28px "Open Sans Condensed"
   color: #222
   background: #E74C3C
   padding: .8em 0
