@@ -3292,9 +3292,9 @@ h1 {
 }
 
 .container {
-  width: 960px;
-  margin: 0 auto;
-  margin-top: 48px;
+  max-width: 980px;
+  padding: 0 24px;
+  margin: 48px auto 24px;
 }
 
 .map {

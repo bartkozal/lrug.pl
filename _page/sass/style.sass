@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=PT+Sans|Open+Sans+Condensed:700&subset=latin,latin-ext)
 
 $body-background: #222
-$body-width: 960px
+$body-width: 980px
 
 $brand-color: #E74C3C
 $base-font-family: "PT Sans"
@@ -31,9 +31,9 @@ h1
   font: $h1-size $headings-font-family
 
 .container
-  width: $body-width
-  margin: 0 auto
-  margin-top: $base-spacing-unit * 2
+  max-width: $body-width
+  padding: 0 $base-spacing-unit
+  margin: $base-spacing-unit * 2 auto $base-spacing-unit
 
 .map
   width: 100%
