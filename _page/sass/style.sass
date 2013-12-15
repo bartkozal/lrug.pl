@@ -1,30 +1,60 @@
 @import url(http://fonts.googleapis.com/css?family=PT+Sans|Open+Sans+Condensed:700&subset=latin,latin-ext)
 
+$body-background: #222
+$body-width: 960px
+
+$brand-color: #E74C3C
+$base-font-family: "PT Sans"
+$headings-font-family: "Open Sans Condensed"
+$base-font-size: 18px
+
+$push: true
+$use-grids: true
+$use-nav: true
+
+@import "../bower_components/inuit.css/defaults"
+@import "../bower_components/inuit.css/inuit"
+
 body
-  background: #222
-  color: #fff
-  font: 100% "PT Sans"
+  background: $body-background
+  color: white
 
-header
-  h1
-    font: 38px "Open Sans Condensed"
-    margin: 2em 0
-  dl
-    font-size: 20px
-    margin-bottom: 4em
-    dt
-      line-height: 1.5em
-    dd
-      font-size: 16px
-      color: #E74C3C
-      margin: .5em 0 2em
+a
+  text-decoration: none
+  color: white
+  transition: all ease .2s
+  &:hover
+    color: $body-background
+    background: $brand-color
 
-.bar
-  text-align: center
-  font: 28px "Open Sans Condensed"
-  color: #222
-  background: #E74C3C
-  padding: .8em 0
+h1
+  font: $h1-size $headings-font-family
 
-#map
-  min-height: 430px
+.container
+  width: $body-width
+  margin: 0 auto
+  margin-top: $base-spacing-unit * 2
+
+.map
+  width: 100%
+  height: 400px
+  box-shadow: 0 0 0 10px rgba(white, .1)
+
+.talks
+  counter-reset: talk
+
+  dt
+    counter-increment: talk
+    margin-bottom: $half-spacing-unit
+
+    &:before
+      content: counter(talk) ". "
+
+  dd
+    @include font-size(15px)
+    color: rgba(white, .3)
+    margin-bottom: $base-spacing-unit
+    margin-left: 0
+
+    &:before
+      content: '— '

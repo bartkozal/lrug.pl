@@ -44,7 +44,7 @@ module.exports = function(grunt) {
     slim: {
       dev: {
         options: {
-          pretty: true
+          pretty: false
         },
         files: [
           {
