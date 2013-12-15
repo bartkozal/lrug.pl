@@ -3307,6 +3307,10 @@ img {
   margin: 48px auto 24px;
 }
 
+.nav--block a {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
 .map {
   width: 100%;
   height: 400px;
