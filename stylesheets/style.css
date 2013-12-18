@@ -3260,3 +3260,8 @@ img {
 .sponsors .sponsors__list a:hover {
   background: transparent;
 }
+
+.btn--facebook:hover {
+  color: white;
+  background: #3b5998;
+}
