@@ -3175,9 +3175,15 @@ label,
   }
 }
 /* endif */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
   background: #222222;
   color: white;
+  margin: 0 0 72px;
 }
 
 a {
@@ -3207,6 +3213,27 @@ img {
   max-width: 980px;
   padding: 0 24px;
   margin: 48px auto 24px;
+}
+
+.sticky-footer {
+  font-size: 16px;
+  font-size: 0.88889rem;
+  line-height: 1.5;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 72px;
+  width: 100%;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.3);
+  padding: 24px 0;
+}
+.sticky-footer a {
+  color: rgba(255, 255, 255, 0.3);
+}
+.sticky-footer a:hover {
+  color: white;
+  background: none;
 }
 
 .nav--block a {
@@ -3264,4 +3291,12 @@ img {
 .btn--facebook:hover {
   color: white;
   background: #3b5998;
+}
+
+.nav--separated li:after {
+  content: "|";
+  margin: 0 24px;
+}
+.nav--separated li:last-child:after {
+  content: "";
 }

@@ -8,6 +8,7 @@ $muted-color: rgba(white, .3)
 $base-font-family: "PT Sans"
 $headings-font-family: "Open Sans Condensed"
 $base-font-size: 18px
+$sticky-footer-height: 72px
 
 $push: true
 $use-grids: true
@@ -15,9 +16,14 @@ $use-nav: true
 
 @import "../bower_components/inuit.css/inuit"
 
+html
+  position: relative
+  min-height: 100%
+
 body
   background: $body-background
   color: white
+  margin: 0 0 $sticky-footer-height
 
 a
   text-decoration: none
@@ -42,6 +48,24 @@ img
   max-width: $body-width
   padding: 0 $base-spacing-unit
   margin: $base-spacing-unit * 2 auto $base-spacing-unit
+
+.sticky-footer
+  @include font-size(16px)
+  position: absolute
+  left: 0
+  bottom: 0
+  height: $sticky-footer-height
+  width: 100%
+  text-align: center
+  color: $muted-color
+  padding: $base-spacing-unit 0
+
+  a
+    color: $muted-color
+
+    &:hover
+      color: white
+      background: none
 
 .nav--block
   a
@@ -96,3 +120,13 @@ img
   &:hover
     color: white
     background: #3b5998
+
+.nav--separated
+  li
+    &:after
+      content: '|'
+      margin: 0 $base-spacing-unit
+    &:last-child:after
+      content: ''
+
+
