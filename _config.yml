@@ -1,0 +1,2 @@
+name: Łódź Ruby User Group
+exclude: ['Gemfile', 'Gemfile.lock']
