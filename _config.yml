@@ -1,2 +1,2 @@
 name: Łódź Ruby User Group
-exclude: [Gemfile, Gemfile.lock, Rakefile, .sass-cache]
+exclude: [Gemfile, Gemfile.lock, Rakefile, .sass-cache, README.md]
