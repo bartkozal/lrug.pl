@@ -67,10 +67,6 @@ img
       color: white
       background: none
 
-.nav--block
-  a
-    box-shadow: inset 0 0 0 1px $muted-color
-
 .map
   width: 100%
   height: 400px
@@ -121,8 +117,12 @@ img
     color: white
     background: #3b5998
 
+.nav--block
+  a
+    box-shadow: inset 0 0 0 1px $muted-color
+
 .nav--separated
-  li
+  > li
     &:after
       content: '|'
       margin: 0 $base-spacing-unit
