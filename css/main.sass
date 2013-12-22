@@ -91,25 +91,23 @@ img
     &:before
       content: '— '
 
-.sponsors
-  margin-top: $base-spacing-unit
+.sponsors-list
+
+  @extend .nav
   text-align: center
+  margin: 0 auto
+  display: table
 
-  .sponsors__list
-    @extend .nav
-    margin: 0 auto
-    display: table
+  li
+    display: table-cell
+    vertical-align: middle
+    padding-right: $base-spacing-unit * 3
 
-    li
-      display: table-cell
-      vertical-align: middle
-      padding-right: $base-spacing-unit * 2
+    &:last-child
+      padding-right: 0
 
-      &:last-child
-        padding-right: 0
-
-    a:hover
-      background: transparent
+  a:hover
+    background: transparent
 
 .btn--facebook
 
