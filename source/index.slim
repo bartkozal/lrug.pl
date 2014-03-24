@@ -1,29 +1,32 @@
-.grid.push--bottom
+.grid
   .grid__item.one-half.palm-one-whole
-    hgroup.landmark
+    hgroup
       h1
         | Łódź Ruby User Group #8
-      time.gamma.brand-color
+      time
         | 17 kwietnia 2014 (czwartek), 18:45
-      .push-half--top.brand-color
+      address
         | ul. Pomorska 39 - Miejski punkt kultury PREXER-UŁ
 
-    dl.talks
-      dt ...
-      dd ...
+    dl
+      dt
+        | Black-box testing
+      dd
+        | Adam Niedzielski
 
-    ul.nav.nav--block
-      li.push--top
-        a href="https://www.facebook.com/events/600922866657841/" class="btn--facebook"
-          | Dołącz na Facebooku
+    a href="https://www.facebook.com/events/600922866657841/"
+      | Dołącz na Facebooku
+
+    h3
+      | Sponsorzy:
+
+    ul.nav.nav--stacked
+      li
+        a href="http://binarapps.com"
+          = image_tag "binarapps.png"
+      li
+        a href="https://shellycloud.com"
+          = image_tag "shellycloud.png"
 
   .grid__item.one-half.palm-one-whole
-    .map.push--ends data-map=""
-
-ul.sponsors-list
-  li
-    a href="http://binarapps.com"
-      img src="/images/binarapps.png"
-  li
-    a href="https://shellycloud.com"
-      img src="/images/shellycloud.png"
+    .map data-map=""

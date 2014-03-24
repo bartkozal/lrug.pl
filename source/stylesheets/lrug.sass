@@ -1,131 +1,76 @@
-@import url(http://fonts.googleapis.com/css?family=PT+Sans|Open+Sans+Condensed:700&subset=latin,latin-ext)
-
-$typecsset-base-font-size: 18px
-$push: true
-
+@import url(http://fonts.googleapis.com/css?family=PT+Sans)
 @import 'normalize-css'
 @import 'typecsset'
 @import 'csswizardry-grids'
 
+$body-width: 980px
+$body-background: #222
+
+$base-font-family: "PT Sans"
 $base-spacing-unit: $typecsset-base-line-height
 $half-spacing-unit: $base-spacing-unit / 2
-$body-background: #222
-$body-width: 980px
-$brand-color: #E74C3C
+
+$sticky-footer-height: $base-spacing-unit * 2
+
+$brand-color: #e74c3c
 $muted-color: rgba(white, .3)
-$base-font-family: "PT Sans"
-$headings-font-family: "Open Sans Condensed"
-$sticky-footer-height: 72px
+$fb-color: #3b5998
+
+*, *:before, *:after
+  box-sizing: border-box
 
 html
   position: relative
   min-height: 100%
 
 body
+  margin-bottom: $sticky-footer-height
+  margin-top: $sticky-footer-height
+  font-family: $base-font-family
   background: $body-background
   color: white
-  margin: 0 0 $sticky-footer-height
 
 a
   text-decoration: none
-  color: white
+  color: $muted-color
   transition: all ease .2s
 
   &:hover
-    color: $body-background
-    background: $brand-color
+    color: white
 
-h1
-  font-family: $headings-font-family
-
-h2, h3, h4
+h2, h3, h4, h5, h6
   font-weight: normal
-  color: $muted-color
 
-img
-  max-width: 100%
+address
+  font-style: normal
 
 .container
   max-width: $body-width
-  padding: 0 $base-spacing-unit
-  margin: $base-spacing-unit * 2 auto $base-spacing-unit
+  margin: $base-spacing-unit auto
 
 .sticky-footer
-  @include typecsset-font-size(16px)
   position: absolute
   left: 0
   bottom: 0
-  height: $sticky-footer-height
   width: 100%
+  height: $sticky-footer-height
+
+.nav
+  margin: 0
+  list-style-type: none
   text-align: center
-  color: $muted-color
-  padding: $base-spacing-unit 0
 
-  a
-    color: $muted-color
+  > li
+    display: inline-block
+    margin-right: $half-spacing-unit
+    margin-left: $half-spacing-unit
+    vertical-align: middle
 
-    &:hover
-      color: white
-      background: none
+.nav--stacked
+  > li
+    display: block
 
 .map
   width: 100%
   height: 400px
   box-shadow: 0 0 0 10px rgba(white, .1)
-
-.talks
-  counter-reset: talk
-
-  dt
-    counter-increment: talk
-    margin-bottom: $half-spacing-unit
-
-    &:before
-      content: counter(talk) ". "
-
-  dd
-    @include typecsset-font-size(15px)
-    color: $muted-color
-    margin-bottom: $base-spacing-unit
-    margin-left: 0
-
-    &:before
-      content: '— '
-
-.sponsors-list
-
-  @extend .nav
-  text-align: center
-  margin: 0 auto
-  display: table
-
-  li
-    display: table-cell
-    vertical-align: middle
-    padding-right: $base-spacing-unit * 3
-
-    &:last-child
-      padding-right: 0
-
-  a:hover
-    background: transparent
-
-.btn--facebook
-
-  &:hover
-    color: white
-    background: #3b5998
-
-.nav--block
-  a
-    box-shadow: inset 0 0 0 1px $muted-color
-
-.nav--separated
-  > li
-    &:after
-      content: '|'
-      margin: 0 $base-spacing-unit
-    &:last-child:after
-      content: ''
-
-
