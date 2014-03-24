@@ -3,6 +3,12 @@
 $typecsset-base-font-size: 18px
 $push: true
 
+@import 'normalize-css'
+@import 'typecsset'
+@import 'csswizardry-grids'
+
+$base-spacing-unit: $typecsset-base-line-height
+$half-spacing-unit: $base-spacing-unit / 2
 $body-background: #222
 $body-width: 980px
 $brand-color: #E74C3C
@@ -10,10 +16,6 @@ $muted-color: rgba(white, .3)
 $base-font-family: "PT Sans"
 $headings-font-family: "Open Sans Condensed"
 $sticky-footer-height: 72px
-
-@import 'normalize-css'
-@import 'typecsset'
-@import 'csswizardry-grids'
 
 html
   position: relative
@@ -34,7 +36,7 @@ a
     background: $brand-color
 
 h1
-  font: $h1-size $headings-font-family
+  font-family: $headings-font-family
 
 h2, h3, h4
   font-weight: normal
@@ -49,7 +51,7 @@ img
   margin: $base-spacing-unit * 2 auto $base-spacing-unit
 
 .sticky-footer
-  @include font-size(16px)
+  @include typecsset-font-size(16px)
   position: absolute
   left: 0
   bottom: 0
@@ -82,7 +84,7 @@ img
       content: counter(talk) ". "
 
   dd
-    @include font-size(15px)
+    @include typecsset-font-size(15px)
     color: $muted-color
     margin-bottom: $base-spacing-unit
     margin-left: 0
