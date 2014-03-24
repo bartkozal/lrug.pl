@@ -3,12 +3,12 @@ html lang="en"
   head
     meta charset="utf-8"
     title
-      | {{ page.title }}
-    link href="css/main.css" rel="stylesheet" type="text/css"
+      | lrug.pl
+    = stylesheet_link_tag "lrug.css"
 
   body
     .container
-      | {{ content }}
+      = yield
 
       footer.sticky-footer
         ul.nav.nav--separated
@@ -19,6 +19,6 @@ html lang="en"
             a href="https://github.com/bkzl/lrug.pl"
               | Fork me on GitHub
 
-    script src="https://maps.googleapis.com/maps/api/js?sensor=false"
-    script src="js/main.js"
+    = javascript_include_tag "https://maps.googleapis.com/maps/api/js?sensor=false"
+    = javascript_include_tag "lrug.js"
 
