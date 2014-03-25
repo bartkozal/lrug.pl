@@ -1,9 +1,9 @@
 .grid
   .grid__item.one-half.palm-one-whole
     h1
-      | Łódź Ruby User Group #8
+      | Łódź Ruby User Group ##{current_event.id}
     time
-      | 17 kwietnia 2014 (czwartek), 18:45
+      | #{current_event.date} (czwartek), 18:45
     address
       | ul. Pomorska 39 - Miejski punkt kultury PREXER-UŁ
 
@@ -11,12 +11,11 @@
       | Agenda:
 
     dl
-      dt
-        | Black-box testing
-      dd
-        | Adam Niedzielski
+      - current_event.talks.each do |talk|
+        dt= link_to_if talk.link, talk.title
+        dd= talk.author
 
-    a href="https://www.facebook.com/events/600922866657841/" class="btn"
+    a href="#{current_event.facebook}" class="btn"
       | Dołącz na Facebooku
 
   .grid__item.one-half.palm-one-whole

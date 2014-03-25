@@ -1,0 +1,71 @@
+[
+  {
+    "id": 8,
+    "date": "17 kwietnia 2014",
+    "talks": [
+      { "author": "Adam Niedzielski", "title": "Black-box testing" }
+    ],
+    "facebook": "https://www.facebook.com/events/600922866657841/"
+  },
+  {
+    "id": 7,
+    "date": "20 marca 2014",
+    "talks": [
+      { "author": "Michał Ostruszka", "title": "You don't need Rails", "link": "https://speakerdeck.com/mostr/you-dont-need-rails" },
+      { "author": "Paweł Placzyński", "title": "Ruby extensions in C", "link": "https://github.com/placek/lrug" },
+      { "author": "Wojciech Żywno", "title": "Email Preview" }
+    ]
+  },
+  {
+    "id": 6,
+    "date": "20 lutego 2014",
+    "talks": [
+      { "author": "Piotr Misiurek", "title": "Jakie znaczenie w pracy programisty mają miękkie skille?"},
+      { "author": "Robert Pankowecki", "title": "Developers Oriented Project Management", "link": "http://projeqt.com/paneq/developers-oriented-project-management/" },
+      { "author": "Adam Niedzielski", "title": "LT: rails-api i active_model_serializers", "link": "http://adamniedzielski.github.io/presentations/api-serializers/#1" }
+    ]
+  },
+  {
+    "id": 5,
+    "date": "16 stycznia 2014",
+    "talks": [
+      { "author": "Bartłomiej Kozal", "title": "Scalable CSS", "link": "https://speakerdeck.com/bkzl/scalable-css" },
+      { "author": "Grzesiek Kołodziejczyk", "title": "Zarządzanie assetami w Rails Assets", "link": "https://speakerdeck.com/grk/rails-assets" },
+      { "author": "Mariusz Pietrzyk", "title": "LT: OfficeBot" }
+    ]
+  },
+  {
+    "id": 4,
+    "date": "3 lipca 2012",
+    "talks": [
+      { "author": "Rafał Piekarski", "title": "Clean Code w Ruby, czyli kod musi być CZYSTY!", "link": "http://www.slideshare.net/RaVbaker/clean-code-w-ruby" },
+      { "author": "Marcin Baliński, Sebastian Baliński", "title": "NoobGameDevel: Historia Mustachio", "link": "https://speakerdeck.com/sebastianb/noob-game-development-historia-mustachio" }
+    ]
+  },
+  {
+    "id": 3,
+    "date": "2 lutego 2012",
+    "talks": [
+      { "author": "Piotr Jakubowski", "title": "Backbone.js" },
+      { "author": "Artur Roszczyk", "title": "Presenters" }
+    ]
+  },
+  {
+    "id": 2,
+    "date": "8 grudnia 2011",
+    "talks": [
+      { "author": "Michał Ostruszka", "title": "Ruby gada z Javą, czyli cross-platform messaging z użyciem STOMP" },
+      { "author": "Rafal Piekarski", "title": "Wyszukiwanie jasne jak słońce - jak stworzyć wyszukiwarkę z Apache Solr i Ruby on Rails", "link": "https://github.com/RaVbaker/LRUG-search-demo" },
+      { "author": "Grzesiek Kołodziejczyk", "title": "ØMQ" }
+    ]
+  },
+  {
+    "id": 1,
+    "date": "20 października 2011",
+    "talks": [
+      { "author": "Bartłomiej Kozal", "title": "Wprowadzenie do websockets", "link": "https://speakerdeck.com/lrug/wprowadzenie-do-websockets" },
+      { "author": "Łukasz Piestrzeniewicz", "title": "Przetwarzanie gigabajtów danych w czasie rzeczywistym z wykorzystaniem Goliath i Resque", "link": "https://speakerdeck.com/lrug/ruby-gigabajty-danych-dziennie-i-czas-rzeczywisty" },
+      { "author": "Grzesiek Kołodziejczyk", "title": "Faye, czyli łatwe pub/sub z websockets", "link": "https://speakerdeck.com/grk/faye" }
+    ]
+  }
+]

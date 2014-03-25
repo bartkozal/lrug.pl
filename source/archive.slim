@@ -1,97 +1,11 @@
 .grid.grid--center
   .grid__item.one-half.palm-one-whole
     a href="/" class="push" ← Powrót na stronę główną
-
-    h2 20 marca 2014
-    dl
-      dt
-        a href="https://speakerdeck.com/mostr/you-dont-need-rails"
-          | You don't need Rails
-      dd Michał Ostruszka
-      dt
-        a href="https://github.com/placek/lrug"
-          | Ruby extensions in C
-      dd Paweł Placzyński
-      dt Email Preview
-      dd Wojciech Żywno
-
-    h2 20 lutego 2014
-    dl
-      dt Jakie znaczenie w pracy programisty mają miękkie skille?
-      dd Piotr Misiurek
-
-      dt
-        a href="http://projeqt.com/paneq/developers-oriented-project-management/"
-          | Developers Oriented Project Management
-      dd Robert Pankowecki
-
-      dt
-        a href="http://adamniedzielski.github.io/presentations/api-serializers/#1"
-          | LT: rails-api i active_model_serializers
-      dd Adam Niedzielski
-
-    h2 16 stycznia 2014
-    dl
-      dt
-        a href="https://speakerdeck.com/bkzl/scalable-css"
-          | Scalable CSS
-      dd Bartłomiej Kozal
-
-      dt
-        a href="https://speakerdeck.com/grk/rails-assets"
-          | Zarządzanie assetami z Rails Assets
-      dd Grzesiek Kołodziejczyk
-
-      dt LT: OfficeBot
-      dd Mariusz Pietrzyk
-
-    h2 3 lipca 2012
-    dl
-      dt
-        a href="http://www.slideshare.net/RaVbaker/clean-code-w-ruby"
-          | Clean Code w Ruby, czyli kod musi być CZYSTY!
-      dd Rafał Piekarski
-      dt
-        a href="https://speakerdeck.com/sebastianb/noob-game-development-historia-mustachio"
-          | NoobGameDevel: Historia Mustachio
-      dd Marcin Baliński, Sebastian Baliński
-
-    h2 2 lutego 2012
-    dl
-      dt Backbone.js
-      dd Piotr Jakubowski
-
-      dt Presenters
-      dd Artur Roszczyk
-
-    h2 8 grudnia 2011
-    dl
-      dt Ruby gada z Javą, czyli cross-platform messaging z użyciem STOMP
-      dd Michał Ostruszka
-
-      dt
-        a href="https://github.com/RaVbaker/LRUG-search-demo"
-          | Wyszukiwanie jasne jak słońce - jak stworzyć wyszukiwarkę z Apache Solr i Ruby on Rails
-      dd Rafal Piekarski
-
-      dt ØMQ
-      dd Grzesiek Kołodziejczyk
-
-    h2 20 października 2011
-    dl
-      dt
-        a href="https://speakerdeck.com/lrug/wprowadzenie-do-websockets"
-          | Wprowadzenie do websockets
-      dd Bartłomiej Kozal
-
-      dt
-        a href="https://speakerdeck.com/lrug/ruby-gigabajty-danych-dziennie-i-czas-rzeczywisty"
-          | Przetwarzanie gigabajtów danych w czasie rzeczywistym z wykorzystaniem Goliath i Resque
-      dd Łukasz Piestrzeniewicz
-
-      dt
-        a href="https://speakerdeck.com/grk/faye"
-          | Faye, czyli łatwe pub/sub z websockets
-      dd Grzesiek Kołodziejczyk
+    - data.events.each do |event|
+      h2= event.date
+      dl
+        - event.talks.each do |talk|
+          dt= link_to_if talk.link, talk.title
+          dd= talk.author
 
     a href="/" class="push" ← Powrót na stronę główną
