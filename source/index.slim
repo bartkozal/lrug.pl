@@ -1,12 +1,14 @@
 .grid
   .grid__item.one-half.palm-one-whole
-    hgroup
-      h1
-        | Łódź Ruby User Group #8
-      time
-        | 17 kwietnia 2014 (czwartek), 18:45
-      address
-        | ul. Pomorska 39 - Miejski punkt kultury PREXER-UŁ
+    h1
+      | Łódź Ruby User Group #8
+    time
+      | 17 kwietnia 2014 (czwartek), 18:45
+    address
+      | ul. Pomorska 39 - Miejski punkt kultury PREXER-UŁ
+
+    h2
+      | Agenda:
 
     dl
       dt
@@ -14,19 +16,19 @@
       dd
         | Adam Niedzielski
 
-    a href="https://www.facebook.com/events/600922866657841/"
+    a href="https://www.facebook.com/events/600922866657841/" class="btn"
       | Dołącz na Facebooku
-
-    h3
-      | Sponsorzy:
-
-    ul.nav.nav--stacked
-      li
-        a href="http://binarapps.com"
-          = image_tag "binarapps.png"
-      li
-        a href="https://shellycloud.com"
-          = image_tag "shellycloud.png"
 
   .grid__item.one-half.palm-one-whole
     .map data-map=""
+
+h2.text-center
+  | Sponsorzy:
+
+ul.nav.sponsors
+  li
+    a href="http://binarapps.com"
+      = image_tag "binarapps.png"
+  li
+    a href="https://shellycloud.com"
+      = image_tag "shellycloud.png"

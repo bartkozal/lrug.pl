@@ -1,13 +1,13 @@
 @import url(http://fonts.googleapis.com/css?family=PT+Sans)
-@import 'normalize-css'
-@import 'typecsset'
-@import 'csswizardry-grids'
+
+$typecsset-h1-size: 36px
+$typecsset-h2-size: 18px
 
 $body-width: 980px
 $body-background: #222
 
 $base-font-family: "PT Sans"
-$base-spacing-unit: $typecsset-base-line-height
+$base-spacing-unit: 24px
 $half-spacing-unit: $base-spacing-unit / 2
 
 $sticky-footer-height: $base-spacing-unit * 2
@@ -15,6 +15,10 @@ $sticky-footer-height: $base-spacing-unit * 2
 $brand-color: #e74c3c
 $muted-color: rgba(white, .3)
 $fb-color: #3b5998
+
+@import 'normalize-css'
+@import 'typecsset'
+@import 'csswizardry-grids'
 
 *, *:before, *:after
   box-sizing: border-box
@@ -38,15 +42,39 @@ a
   &:hover
     color: white
 
-h2, h3, h4, h5, h6
+h2
   font-weight: normal
+  color: $muted-color
+
+time
+  display: block
+  margin-bottom: $half-spacing-unit
+  +typecsset-font-size(22px)
+  color: $brand-color
 
 address
   font-style: normal
+  +typecsset-font-size(18px)
+  color: $brand-color
+
+dl
+  margin-bottom: $base-spacing-unit * 2
+  dt
+    +typecsset-font-size(24px)
+    margin-bottom: $half-spacing-unit
+    a
+      color: $brand-color
+  dd
+    margin-left: 0
+    &:before
+      content: '— '
 
 .container
   max-width: $body-width
   margin: $base-spacing-unit auto
+
+.grid
+  margin-bottom: $base-spacing-unit * 3
 
 .sticky-footer
   position: absolute
@@ -66,11 +94,27 @@ address
     margin-left: $half-spacing-unit
     vertical-align: middle
 
-.nav--stacked
-  > li
-    display: block
-
 .map
   width: 100%
   height: 400px
   box-shadow: 0 0 0 10px rgba(white, .1)
+
+.sponsors
+  > li
+    margin-right: $base-spacing-unit
+    margin-left: $base-spacing-unit
+
+.btn
+  padding: $half-spacing-unit $base-spacing-unit
+  border: 1px solid white
+  color: white
+
+  &:hover
+    background: $fb-color
+
+.push
+  display: block
+  margin-bottom: $base-spacing-unit
+
+.text-center
+  text-align: center
