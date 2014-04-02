@@ -3,7 +3,8 @@
     "id": 8,
     "date": "17 kwietnia 2014",
     "talks": [
-      { "author": "Adam Niedzielski", "title": "Black-box testing" }
+      { "author": "Adam Niedzielski", "title": "Black-box testing" },
+      { "author": "Piotr Marciniak", "title": "Decorators vs Helpers" }
     ],
     "facebook": "https://www.facebook.com/events/600922866657841/"
   },
