@@ -3,6 +3,7 @@
     "id": 9,
     "date": "26 czerwca 2014",
     "talks": [
+      { "author": "Bartłomiej Kozal", "title": "Porównanie generatorów stron statycznych: Middleman, Jekyll, Nanoc" },
       { "author": "Piotr Marciniak", "title": "Full text search with Sphinx" }
     ],
     "facebook": "https://www.facebook.com/events/739041016116599/"
