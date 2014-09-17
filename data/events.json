@@ -1,9 +1,16 @@
 [
   {
+    "id": 10,
+    "date": "21 października 2014",
+    "talks": [
+      { "author": "Piotr Marciniak", "title": "Analizatory kodu (brakeman, rails best practices etc.)" }
+    ]
+  },
+  {
     "id": 9,
     "date": "26 czerwca 2014",
     "talks": [
-      { "author": "Bartłomiej Kozal", "title": "Porównanie generatorów stron statycznych: Middleman, Jekyll, Nanoc" },
+      { "author": "Bartłomiej Kozal", "title": "Porównanie generatorów stron statycznych: Middleman, Jekyll, Nanoc", "link": "https://speakerdeck.com/bkzl/middleman" },
       { "author": "Piotr Marciniak", "title": "Full text search with Sphinx" }
     ],
     "facebook": "https://www.facebook.com/events/739041016116599/"
