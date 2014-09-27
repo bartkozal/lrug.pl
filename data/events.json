@@ -1,7 +1,7 @@
 [
   {
     "id": 10,
-    "date": "21 października 2014",
+    "date": "23 października 2014",
     "talks": [
       { "author": "Piotr Marciniak", "title": "Analizatory kodu (brakeman, rails best practices etc.)" }
     ]
