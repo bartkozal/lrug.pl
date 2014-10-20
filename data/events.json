@@ -4,7 +4,8 @@
     "date": "23 października 2014",
     "talks": [
       { "author": "Piotr Marciniak", "title": "Analizatory kodu (brakeman, rails best practices etc.)" },
-      { "author": "Adam Sokolnicki", "title": "Emacs i programowanie w Ruby on Rails" }
+      { "author": "Adam Sokolnicki", "title": "Emacs i programowanie w Ruby on Rails" },
+      { "author": "Michał Brodecki", "title": "Object_id w Ruby" }
     ]
   },
   {
