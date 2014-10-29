@@ -3,7 +3,8 @@
     "id": 11,
     "date": "20 listopada 2014",
     "talks": [
-      { "author": "Bartłomiej Kozal", "title": "Vim i programowanie w Ruby" }
+      { "author": "Bartłomiej Kozal", "title": "Vim i programowanie w Ruby" },
+      { "author": "Michał Gutowski", "title": "Garbage Collector w Ruby" }
     ]
   },
   {
