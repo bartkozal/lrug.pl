@@ -1,30 +1,10 @@
-.grid
-  .grid__item.one-half.palm-one-whole
-    h1
-      | Łódź Ruby User Group ##{current_event.id}
-    time
-      | #{current_event.date} (czwartek), 18:45
-    address
-      | ul. Pomorska 39 - Miejski punkt kultury PREXER-UŁ
+a href="http://www.meetup.com/lodzrug/" class="btn"
+  | Dołącz na Meetup
 
-    h2
-      | Agenda:
-
-    dl
-      - current_event.talks.each do |talk|
-        dt= link_to_if talk.link, talk.title
-        dd= talk.author
-
-    a href="http://www.meetup.com/lodzrug/" class="btn"
-      | Dołącz na Meetup
-
-  .grid__item.one-half.palm-one-whole
-    .map data-map=""
-
-h2.text-center
+h3 class="heading"
   | Sponsorzy:
 
-ul.nav.sponsors
+ul class="inline-list"
   li
     a href="http://binarapps.com"
       = image_tag "binarapps.png"
